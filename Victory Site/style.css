@@ -1,0 +1,405 @@
+/* ======================
+   ROOT COLOURS (Biblical Brown Theme)
+====================== */
+
+:root{
+  --brown-deep: #4b3621;
+  --brown-soft: #6a4e33;
+  --brown-light: #8c6b4f;
+  --parchment: #f3efe7;
+  --gold-soft: #c2a66b;
+  --gold-light: #e0cc9a;
+  --white-soft: #ffffff;
+}
+
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--parchment);
+  color:var(--brown-deep);
+  line-height:1.6;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:var(--white-soft);
+  border-bottom:3px solid var(--gold-light);
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;
+  color:var(--brown-deep);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--brown-soft);
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--gold-soft);
+}
+
+@media(max-width:768px){
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+  }
+  nav ul{
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  height:85vh;
+  background:
+    linear-gradient(rgba(75,54,33,0.75), rgba(75,54,33,0.75)),
+    url('hero.jpg') center/cover no-repeat; 
+  /* 🔥 Replace hero.jpg with your main image */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:0 20px;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.hero p{
+  margin-bottom:25px;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size: 2.2rem;
+  }
+  .hero p{
+    font-size: 1rem;
+  }
+  .hero{
+    padding: 60px 5%;
+  }
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+  padding:12px 28px;
+  background:var(--gold-soft);
+  color:white;
+  border:none;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:500;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:var(--gold-light);
+  color:var(--brown-deep);
+}
+
+.btn-outline{
+  padding:10px 22px;
+  border:2px solid var(--brown-soft);
+  color:var(--brown-soft);
+  text-decoration:none;
+  border-radius:4px;
+  transition:0.3s;
+}
+
+.btn-outline:hover{
+  background:var(--brown-soft);
+  color:white;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  padding:80px 10%;
+}
+
+h2{
+  font-family:'Playfair Display',serif;
+  margin-bottom:25px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:var(--white-soft);
+}
+
+@media(max-width:480px){
+  footer{
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+  .social-icons img{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ================= CAROUSEL ================= */
+
+.media-section{
+  background:var(--parchment);
+  text-align:center;
+}
+
+.media-section.light{
+  background:var(--white-soft);
+}
+
+.carousel{
+  position:relative;
+  overflow:hidden;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.carousel-track{
+  display:flex;
+  transition:transform 0.4s ease;
+}
+
+.slide{
+  min-width:100%;
+  max-height:450px;
+  object-fit:cover;
+}
+
+video.slide{
+  background:black;
+}
+
+@media(max-width:768px){
+  .slide{
+    max-height: 300px;
+  }
+  video.slide{
+    max-height: 250px;
+  }
+  .prevl, .next{
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+/* ARROWS */
+
+.prev, .next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:var(--brown-soft);
+  color:white;
+  border:none;
+  padding:12px;
+  cursor:pointer;
+  font-size:18px;
+  border-radius:50%;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.prev:hover, .next:hover{
+  background:var(--gold-soft);
+}
+
+.see-more{
+  margin-top:20px;
+}
+
+/* ================= LOCATION ================= */
+
+.location{
+  background:var(--parchment);
+  text-align:center;
+}
+
+.map-container{
+  margin-top:30px;
+  border:4px solid var(--brown-light);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:var(--white-soft);
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:500px;
+}
+
+input, textarea{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-family:'Inter',sans-serif;
+}
+
+textarea{
+  resize:vertical;
+  height:120px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:var(--brown-deep);
+  color:white;
+  text-align:center;
+  padding:25px;
+  font-size:0.9rem;
+}
+
+@media(max-width:480px){
+  footer{
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+  .social-icons img{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:2.2rem;
+  }
+}
+
+/* ================= DATES ================= */
+.dates{
+  background: var(--white-soft);
+  padding:60px 10%;
+}
+.dates ul{
+  list-style: disc inside;
+  margin-top:20px;
+}
+.dates li{
+  margin-bottom:12px;
+  font-weight:500;
+}
+
+@media(max-width:480px){
+  footer{
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+  .social-icons img{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ================= INTERVIEW ================= */
+.interview{
+  background: var(--parchment);
+  padding:60px 10%;
+  text-align:center;
+}
+.interview p{
+  margin-top:15px;
+}
+
+.audio-interview{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+  margin-top:25px;
+}
+
+.podcast-cover{
+  width:100%;
+  max-width:400px;
+  border-radius:8px;
+  border:4px solid var(--brown-light);
+}
+
+/* ================= SOCIAL MEDIA ================= */
+.socials{
+  background: var(--white-soft);
+  padding:60px 10%;
+  text-align:center;
+}
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:20px;
+}
+.social-icons img{
+  width:40px;
+  height:40px;
+  transition:0.3s;
+}
+.social-icons img:hover{
+  transform:scale(1.2);
+}
+
+@media(max-width:480px){
+  footer{
+    font-size: 0.8rem;
+    padding: 20px 10px;
+  }
+  .social-icons img{
+    width: 30px;
+    height: 30px;
+  }
+}
