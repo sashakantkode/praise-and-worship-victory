@@ -80,7 +80,7 @@ nav a:hover{
   height:85vh;
   background:
     linear-gradient(rgba(75,54,33,0.75), rgba(75,54,33,0.75)),
-    url('hero.jpg') center/cover no-repeat; 
+    url('hero.png') center/cover no-repeat; 
   /* 🔥 Replace hero.jpg with your main image */
   display:flex;
   align-items:center;
